@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajax Sample</title>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="test.js"></script>
+
+</head>
+<style>
+    #summoner_id {
+        width: 500px;
+        height: 30px;
+        padding-left: 10px;
+        font-size: 18px;
+        color: black;
+        border: 1px solid gray;
+        border-radius: 3px;
+    }
+
+    #summoner{
+        color:black;
+        font-weight: bold;
+        margin-right: 20px;
+        font-size: 18px;
+    }
+</style>
+
+<body>
+<h2 id="summoner" style="margin: 20px 20px 20px 20px">형태소 분석기 가동 프로그램</h2>
+<div class="container" style="margin: 20px 20px 20px 20px">
+    <input type="text" class="form-control" placeholder="Input Text" id="input_box" size="40px" autofocus>
+    <button onclick="file_browse()" class="btn btn-default">파일로 선택하기</button>
+    <button type="button" id="submit_input" class="btn btn-default"> 조회하기 </button>
+    <input type="file" id="input" style="display: none">
+    <br/><br/>
+</div>
+
+
+<p></p>
+
+<div style="margin-left: 30px"><h4> 입력값 : <span id="response-panel2" /></h4></div>
+<br>
+
+<table style="margin-left : 50px">
+    <tr>
+        <th class="text-center"><h4>종류</h4></th>
+        <th class="text-center"><h4>KKMA</h4></th>
+        <th class="text-center"><h4>Twitter</h4></th>
+        <th class="text-center"><h4>KOMORAN</h4></th>
+    </tr>
+    <tr>
+        <th class="text-center"><h4>결과</h4></th>
+        <td><textarea class="form-control" cols="30" rows="15" id="result_kkma" style="resize:none" readonly></textarea></td>
+        <td><textarea class="form-control" cols="30px" rows="15" id="result_twitter" style="resize:none" readonly></textarea></td>
+        <td><textarea class="form-control" cols="30" rows="15" id="result_komoran" style="resize:none" readonly></textarea></td>
+    </tr>
+    <tr>
+        <th class="text-center"><h4>명사 추출</h4></th>
+        <td><textarea class="form-control" cols="30" rows="15" id="kkma_noun" style="resize:none" readonly></textarea></td>
+        <td><textarea class="form-control" cols="30" rows="15" id="twitter_noun" style="resize:none" readonly></textarea></td>
+        <td><textarea class="form-control" cols="30" rows="15" id="komoran_noun" style="resize:none" readonly></textarea></td>
+    </tr>
+    <tr>
+        <th class="text-center"><h4>걸린 시간<br>(초)</h4></th>
+        <td><textarea class="form-control" cols="30" rows="1" id="kkma_time" style="resize:none" readonly></textarea></td>
+        <td><textarea class="form-control" cols="30px" rows="1" id="twitter_time" style="resize:none" readonly></textarea></td>
+        <td><textarea class="form-control" cols="30" rows="1" id="komoran_time" style="resize:none" readonly></textarea></td>
+    </tr>
+</table>
+</body>
+</html>
